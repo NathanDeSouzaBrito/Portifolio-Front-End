@@ -662,15 +662,30 @@
           <h2 class="section__title-2 En"><span>Contact Me</span></h2>
           <h2 class="section__title-2 Pt-br"><span>Contrate-Me</span></h2>
 
-          <p class="contact__description-1">q</p>
-          <p class="contact__description-2">q</p>
+          <p class="contact__description-1 En">
+            I will read all emails. Send me any menssage you <br />
+            want and I'll get back to you.
+          </p>
+          <p class="contact__description-1 Pt-br">
+            Vou ler todos os e-mails. Me manda qualquer menssage que você quiser
+            e eu vou voltar para você.
+          </p>
+
+          <p class="contact__description-2 En">
+            I need your <b>Name</b> and <b>Email Address</b>, as soon as
+            possible, I will be answering your email
+          </p>
+          <p class="contact__description-2 Pt-br">
+            Preciso do seu <b>Nome</b> e <b>Endereço de E-mail</b>, assim que
+            possivel, estarei respondendo seu email
+          </p>
 
           <div class="geometric-box"></div>
         </div>
 
         <div class="contact__mail">
           <h2 class="contact__title En">Send Me A Message</h2>
-          <h2 class="contact__title Pt-">Mande-Me Uma Menssagem</h2>
+          <h2 class="contact__title Pt-br">Mande-Me Uma Menssagem</h2>
 
           <!--============ Form En =================-->
           <form action="" class="contact__form En" id="contact-form">
@@ -718,10 +733,8 @@
                 id="massage"
                 class="contact__input"
                 required
-                placeholder=""
-              >
-                    Message</textarea
-              >
+                placeholder="Message"
+              ></textarea>
               <label for="message" class="contact__label">Message</label>
             </div>
 
@@ -731,9 +744,9 @@
           </form>
 
           <!--============ Form Pt-br ==============-->
-          <form action="" class="contact__form Pt-br" id="contact-form">
+          <form action="" class="contact__form" id="contact-form">
             <div class="contact__group">
-              <div class="contact__box">
+              <div class="contact__box Pt-br">
                 <input
                   type="text"
                   name="user_name"
@@ -745,7 +758,7 @@
                 <label for="name" class="contact__label">Nome</label>
               </div>
 
-              <div class="contact__box">
+              <div class="contact__box Pt-br">
                 <input
                   type="email"
                   name="user_email"
@@ -760,7 +773,7 @@
               </div>
             </div>
 
-            <div class="contact__box">
+            <div class="contact__box Pt-br">
               <input
                 type="text"
                 name="user_subject"
@@ -772,25 +785,20 @@
               <label for="subject" class="contact__label">Assunto</label>
             </div>
 
-            <div class="contact__box contact__area">
+            <div class="contact__box contact__area Pt-br">
               <textarea
                 name="user_message"
                 id="massage"
                 class="contact__input"
                 required
-                placeholder=""
-              >
-                    Menssagem</textarea
-              >
+                placeholder="Menssagem"
+              ></textarea>
               <label for="message" class="contact__label">Menssagem</label>
             </div>
-
-            <button type="submit" class="contact__button button">
-              <i class="ri-send-plane-line"></i> Enviar Menssage
-            </button>
           </form>
         </div>
 
+        <!--============== Contact Socila ==============-->
         <div class="contact__social">
           <img src="/imgs/arrow.svg" alt="" class="contact__social-arrow" />
 
