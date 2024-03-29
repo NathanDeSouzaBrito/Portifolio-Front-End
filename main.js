@@ -36,3 +36,20 @@ const shadowHeader = () => {
     }
 };
 window.addEventListener("scroll", shadowHeader);
+const contactForm = document.getElementById("contact-form");
+const contactMessage = document.getElementById("contact-message");
+function sendEmail(e) {
+    e.preventDefault();
+    emailjs
+        .sendForm("service_jlammo7", "template_lqwkcwa", "#contact-form", "LxYe5ulaHK9razvQJ")
+        .then(() => {
+        contactMessage.textContent = "Message sent successfully ✅";
+        setTimeout(() => {
+            contactMessage.textContent = "";
+        }, 3000);
+        contactForm.reset();
+    }, () => {
+        contactMessage.textContent = "Message not sent ❌";
+    });
+}
+contactForm.addEventListener("submit", sendEmail);

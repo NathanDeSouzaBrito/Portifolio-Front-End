@@ -941,3 +941,11 @@ button i {
 .contact__social-link:hover {
     background-color: var(--first-color);
 }
+
+.contact__message {
+    color: var(--white-color);
+    font-size: var(--smaller-font-size);
+    position: absolute;
+    bottom: -1.6rem;
+    left: 0;
+}

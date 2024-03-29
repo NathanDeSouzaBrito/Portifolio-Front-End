@@ -42,3 +42,41 @@ const shadowHeader = () => {
   }
 };
 window.addEventListener("scroll", shadowHeader);
+
+//========================= EMAIL JS ========================================
+declare var emailjs: any;
+
+const contactForm: HTMLFormElement = document.getElementById(
+  "contact-form"
+) as HTMLFormElement;
+const contactMessage: HTMLElement = document.getElementById(
+  "contact-message"
+) as HTMLElement;
+
+function sendEmail(e: Event) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_jlammo7",
+      "template_lqwkcwa",
+      "#contact-form",
+      "LxYe5ulaHK9razvQJ"
+    )
+    .then(
+      () => {
+        contactMessage.textContent = "Message sent successfully ✅";
+
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 3000);
+
+        contactForm.reset();
+      },
+      () => {
+        contactMessage.textContent = "Message not sent ❌";
+      }
+    );
+}
+
+contactForm.addEventListener("submit", sendEmail);
