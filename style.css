@@ -100,10 +100,20 @@ img {
     padding: .3rem;
     
     box-shadow:  0 0 10px 5px var(--black-color);
-    /* border: 3px solid; */
     border-radius: 1rem;
 }
 
+/*================= TRANSLATOR ============================*/
+.translator {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: color .3s;
+    padding: .3rem;
+    
+    box-shadow:  0 0 10px 5px var(--black-color);
+    border-radius: 1rem;
+}
 /*========== Variables Dark theme ====================*/
 body.dark-theme {
     --first-color: hsl(14, 98%, 50%);
@@ -224,9 +234,7 @@ body.dark-theme {
     overflow: hidden;
 }
 
-.Pt-br {
-    display: none;
-}
+
 
 /*=============================== HEADER AND NAV =======================*/
 .header {
