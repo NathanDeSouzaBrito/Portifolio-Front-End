@@ -1002,3 +1002,37 @@ button i {
 }
 
 /*=================== SCROLL UP =======================*/
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    background-color: var(--black-color);
+    display: inline-flex;
+    padding: 8px;
+    font-size: 1.25rem;
+    color: var(--white-color);
+    z-index: var(--z-tooltip);
+    transition: bottom .4s, transform .4s, background-color .4s;
+    cursor: pointer;
+}
+
+.scrollup:hover {
+    transform: translateY(-.5rem);
+    background-color: var(--first-color);
+}
+
+/*========= Show scroll up ==========*/
+.show-scroll {
+    bottom: 3rem;
+}
+
+/*====== Active link ========*/
+.active-link {
+    color: var(--white-color);
+}
+
+.active-link::after {
+    width: 30%;
+    background-color: var(--first-color);
+}
+/*=================== RESPONSIVE =======================*/

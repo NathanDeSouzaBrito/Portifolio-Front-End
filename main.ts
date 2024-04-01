@@ -80,3 +80,47 @@ function sendEmail(e: Event) {
 }
 
 contactForm.addEventListener("submit", sendEmail);
+
+//========================= SCROLL UP ========================================
+const scrollUp = () => {
+  const scrollUp: HTMLElement | null = document.getElementById("scroll-up");
+  if (scrollUp) {
+    window.scrollY >= 350
+      ? scrollUp.classList.add("show-scroll")
+      : scrollUp.classList.remove("show-scroll");
+  }
+};
+
+window.addEventListener("scroll", scrollUp);
+
+//========================= SCROLL SECTIONS ACTIVE LINK =================================
+const sections: NodeListOf<HTMLElement> =
+  document.querySelectorAll("section[id]");
+
+const scrollActive = () => {
+  const scrollDown: number = window.scrollY;
+
+  sections.forEach((current: HTMLElement) => {
+    const sectionHeight: number = current.offsetHeight,
+      sectionTop: number = current.offsetTop - 58,
+      sectionId: string | null = current.getAttribute("id");
+
+    if (sectionId) {
+      const sectionClass: HTMLElement | null = document.querySelector(
+        ".nav__menu a[href*=" + sectionId + "]"
+      );
+
+      if (sectionClass) {
+        if (
+          scrollDown > sectionTop &&
+          scrollDown <= sectionTop + sectionHeight
+        ) {
+          sectionClass.classList.add("active-link");
+        } else {
+          sectionClass.classList.remove("active-link");
+        }
+      }
+    }
+  });
+};
+window.addEventListener("scroll", scrollActive);
