@@ -105,39 +105,3 @@ themeButton.addEventListener("click", () => {
     localStorage.setItem("selected-theme", getCurrentTheme());
     localStorage.setItem("selected-icon", getCurrentIcon());
 });
-//======================TRANSLATOR =============================
-// Suponha que temos duas divs com os ids 'div1' e 'div2'
-// var buttonTranslator: HTMLElement | null =
-//   document.getElementById("translator");
-// var ptBr: HTMLCollection = document.getElementsByClassName("Pt-br");
-// var en: HTMLCollection = document.getElementsByClassName("En");
-// ==========================================
-// Encontre o elemento <i> pelo seu seletor
-// const buttonTranslator = document.querySelector("#translator") as HTMLElement;
-// // Adicione um ouvinte de eventos de clique ao ícone
-// buttonTranslator.addEventListener("click", () => {
-//   // Encontre os elementos com as classes desejadas
-//   const En = document.querySelector("En") as HTMLElement;
-//   const PtBr = document.querySelector(".Pt-Br") as HTMLElement;
-//   // Verifique se os elementos foram encontrados
-//   if (En && PtBr) {
-//     // Oculte a classe En e mostre a classe PtBr
-//     En.style.display = "none";
-//     PtBr.style.display = "block";
-//   }
-// });
-// Espera até que o DOM esteja completamente carregado
-document.addEventListener("DOMContentLoaded", function () {
-    // Coloque o código aqui para garantir que seja executado apenas após o carregamento do DOM
-    const icon = document.querySelector("#translator");
-    if (icon) {
-        icon.addEventListener("click", () => {
-            const desaparecer = document.querySelector(".En");
-            const aparecer = document.querySelector(".Pt-br");
-            if (desaparecer && aparecer) {
-                desaparecer.style.display = "none";
-                aparecer.style.display = "block";
-            }
-        });
-    }
-});
