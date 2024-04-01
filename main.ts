@@ -124,3 +124,35 @@ const scrollActive = () => {
   });
 };
 window.addEventListener("scroll", scrollActive);
+
+//=============================== DARK LIGHT THEME ================================
+const themeButton = document.getElementById("theme-button") as HTMLElement;
+const darkTheme: string = "dark-theme";
+const iconTheme: string = "ri-sun-foggy-fill";
+
+const selectedTheme: string | null = localStorage.getItem("selected-theme");
+const selectedIcon: string | null = localStorage.getItem("selected-icon");
+
+const getCurrentTheme = (): string =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = (): string =>
+  themeButton.classList.contains(iconTheme)
+    ? "ri-moon-clear-fill"
+    : "ri-sun-foggy-fill";
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeButton.classList[
+    selectedIcon === "ri-moon-clear-fill" ? "add" : "remove"
+  ](iconTheme);
+}
+
+themeButton.addEventListener("click", () => {
+  // Add or remove the dark / icon theme
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+});
