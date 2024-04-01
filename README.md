@@ -1,6 +1,9 @@
 # Olá, bem-vindo ao meu Portfólio! 👋
 
-Meu nome é [Seu Nome] e sou um desenvolvedor front-end júnior. Este portfólio é um reflexo da minha jornada na área de desenvolvimento web e design.
+Site do Portifolio
+https://portifoliofront-end-nathan-de-souza.netlify.app/
+
+Meu nome é Nathan De Souza e sou um desenvolvedor front-end júnior. Este portfólio é um reflexo da minha jornada na área de desenvolvimento web e design.
 
 ## Minha Carreira 🚀
 
