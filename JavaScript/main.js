@@ -43,13 +43,13 @@ function sendEmail(e) {
     emailjs
         .sendForm("service_jlammo7", "template_lqwkcwa", "#contact-form", "LxYe5ulaHK9razvQJ")
         .then(() => {
-        contactMessage.textContent = "Message sent successfully ✅";
+        contactMessage.textContent = "Mensagem enviada com sucesso ✅";
         setTimeout(() => {
             contactMessage.textContent = "";
         }, 3000);
         contactForm.reset();
     }, () => {
-        contactMessage.textContent = "Message not sent ❌";
+        contactMessage.textContent = "Mensagem não enviada ❌";
     });
 }
 contactForm.addEventListener("submit", sendEmail);
