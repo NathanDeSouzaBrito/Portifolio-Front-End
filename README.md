@@ -13,7 +13,6 @@ Iniciei minha carreira como desenvolvedor front-end júnior e tenho trabalhado c
 
 Tenho uma sólida compreensão dos fundamentos do desenvolvimento web, incluindo HTML, CSS e JavaScript. Além disso, estou familiarizado com várias bibliotecas e frameworks populares.
 
-No que diz respeito ao design web, tenho uma compreensão básica dos princípios de design e UX, e estou confortável trabalhando com ferramentas de design modernas.
 
 ## Projetos 💼
 
