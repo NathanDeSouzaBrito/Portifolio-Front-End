@@ -751,9 +751,30 @@ button i {
 
 .projects__tech {
   margin-top: 1rem;
-  font-size: 0.9rem;
-  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.8rem;
 }
+
+.projects__tech i,
+.projects__tech img {
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.projects__tech i:hover,
+.projects__tech img:hover {
+  transform: scale(1.2);
+}
+
+.tech__vite {
+  width: 24px;
+  height: 24px;
+}
+
+
 
 
 
