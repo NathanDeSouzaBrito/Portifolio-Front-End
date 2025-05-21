@@ -94,35 +94,31 @@ const scrollUp = () => {
 window.addEventListener("scroll", scrollUp);
 
 //========================= SCROLL SECTIONS ACTIVE LINK =================================
-const sections: NodeListOf<HTMLElement> =
-  document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll<HTMLElement>("section[id]");
 
-const scrollActive = () => {
-  const scrollDown: number = window.scrollY;
+const scrollActive = (): void => {
+  const scrollPosition = window.scrollY;
 
-  sections.forEach((current: HTMLElement) => {
-    const sectionHeight: number = current.offsetHeight,
-      sectionTop: number = current.offsetTop - 58,
-      sectionId: string | null = current.getAttribute("id");
+  sections.forEach((section) => {
+    const sectionId = section.id;
+    const sectionTop = section.offsetTop - 58;
+    const sectionHeight = section.offsetHeight;
 
-    if (sectionId) {
-      const sectionClass: HTMLElement | null = document.querySelector(
-        ".nav__menu a[href*=" + sectionId + "]"
-      );
+    if (!sectionId) return;
 
-      if (sectionClass) {
-        if (
-          scrollDown > sectionTop &&
-          scrollDown <= sectionTop + sectionHeight
-        ) {
-          sectionClass.classList.add("active-link");
-        } else {
-          sectionClass.classList.remove("active-link");
-        }
-      }
-    }
+    const navLink = document.querySelector<HTMLElement>(
+      `.nav__menu a[href*="${sectionId}"]`
+    );
+    if (!navLink) return;
+
+    const isInSection =
+      scrollPosition > sectionTop &&
+      scrollPosition <= sectionTop + sectionHeight;
+
+    navLink.classList.toggle("active-link", isInSection);
   });
 };
+
 window.addEventListener("scroll", scrollActive);
 
 //=============================== DARK LIGHT THEME ================================
