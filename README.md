@@ -3,7 +3,7 @@
 Site do Portifolio
 https://portifoliofront-end-nathan-de-souza.netlify.app/
 
-Meu nome é Nathan De Souza e sou um desenvolvedor front-end júnior. Este portfólio é um reflexo da minha jornada na área de desenvolvimento web.
+Meu nome é Nathan De Souza e sou um desenvolvedor Full-Stack júnior. Este portfólio é um reflexo da minha jornada na área de desenvolvimento web.
 
 ## Minha Carreira 🚀
 
@@ -11,7 +11,7 @@ Iniciei minha carreira como desenvolvedor front-end júnior e tenho trabalhado c
 
 ## Habilidades e Conhecimentos 🛠️
 
-Tenho uma sólida compreensão dos fundamentos do desenvolvimento web, incluindo HTML, CSS e JavaScript. Além disso, estou familiarizado com várias bibliotecas e frameworks populares.
+Tenho uma sólida compreensão dos fundamentos do desenvolvimento web, incluindo HTML, CSS, JavaScript, React, Vue e Java. Além disso, estou familiarizado com várias bibliotecas e frameworks populares.
 
 
 ## Projetos 💼
